@@ -7,11 +7,17 @@ public class CollisionController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject hitter = collision.collider.gameObject;
-        if (hitter.CompareTag("Item"))
+        print(hitter.name);
+        //if (hitter.CompareTag("Item"))
+        //{
+        //    //hitter.GetComponent<Rigidbody>().
+        //    //    AddForce(new Vector3(0f, 10f, 0f), ForceMode.Impulse);
+        //    Destroy(hitter);
+        //}
+
+        if (hitter.CompareTag("Player"))
         {
-            //hitter.GetComponent<Rigidbody>().
-            //    AddForce(new Vector3(0f, 10f, 0f), ForceMode.Impulse);
-            Destroy(hitter);
+            print(hitter.tag);
         }
     }
 

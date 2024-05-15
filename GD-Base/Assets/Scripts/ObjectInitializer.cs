@@ -8,6 +8,8 @@ public class ObjectInitializer : MonoBehaviour
 
     private void Start()
     {
+
+
         Destroy(gameObject);
     }
 }

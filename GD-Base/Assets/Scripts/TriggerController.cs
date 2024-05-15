@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerController : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class TriggerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.transform.position = TeleportTarget.position;
+            SceneManager.LoadScene("SampleScene");
+            //other.gameObject.transform.position = TeleportTarget.position;
+            //other.gameObject.GetComponent<Player>().IncreaseMaxHP();
         }
     }
 
